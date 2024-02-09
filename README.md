@@ -75,7 +75,7 @@ frontend/
 |   ├── config.toml
 |   └── secrets.toml  # Make sure to gitignore this!
 ```
-**Finally, replace `MONGODB_PASSWORD` in [.env](./frontend/.env)**
+**Finally, replace `MONGODB_PASSWORD` in [.env](./frontend/.env) as well as your MONGODB Cluster in [features.py](./frontend/features.py)**
 
 #### Mockup Ecommerce Setup `cd mockup-ecommerce`:
 
