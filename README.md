@@ -1,14 +1,11 @@
 # BloomSage ML Pipeline Demo
 
+### ***Disclaimer***
 **REQUIRED PYTHON VERSION: 3.10**
 
 This is a very barebone project intended as a demonstration on how to utilize our machine learning pipeline for real-time inference in a web application with 2 components: Backend API (using FastAPI) and Frontend UI (using Streamlit).
 
 Please note that this project is only configured to run on your local machine, and no consideration were made for streamlining deployment.
-
-As such, please note that both `backend/.env` and `frontend/.env` environment secrets are version tracked. This is **BAD** practice in a real deployment environment and should be avoided when developing our actual application.
-
-I assume that you are proficient in using the terminal in both POSIX (Linux and MacOS) and Windows environment, and understand the basics of full-stack web application development.
 
 ---
 
@@ -66,9 +63,6 @@ git clone https://github.com/rmit-denominator/bloomsage-models-usage-demo.git
 
 #### Backend Setup `cd backend`:
 
-**Demo**: https://faithful-adequate-mudfish.ngrok-free.app/
-
-- UNIX/Linux:
   ```bash
   python -m venv .venv
   source .venv/bin/activate
@@ -80,29 +74,8 @@ git clone https://github.com/rmit-denominator/bloomsage-models-usage-demo.git
   source .venv/bin/activate
   python ./main.py
   ```
-Open another console for `ngrok`
-```bash
-ngrok tunnel --label edge=edghts_2atupyk74q8O638a0bdIkg9CPro http://localhost:8000
-```
-- Windows Systems:
-  ```bash
-  python -m venv venv
-  venv/Script/activate
-  pip install -r ./requirements.txt
-  python ./ml_fetch.py
-  deactivate
-  ```
-  ```bash
-  venv/Script/activate
-  python ./main.py
-  ```
-Open another console for `ngrok`
-```bash
-ngrok tunnel --label edge=edghts_2atupyk74q8O638a0bdIkg9CPro http://localhost:8000
-```
-#### Frontend Setup `cd frontend`:
 
-**Demo**: https://bloomsage.streamlit.app/
+#### Frontend Setup `cd frontend`:
 
 - UNIX/Linux:
   ```bash
@@ -114,17 +87,6 @@ ngrok tunnel --label edge=edghts_2atupyk74q8O638a0bdIkg9CPro http://localhost:80
   ```bash
   source .venv/bin/activate
   streamlit run ./main.py --server.port 8081
-  ```
-- Windows Systems:
-  ```bash
-  python -m venv venv
-  venv/Script/activate
-  pip install -r ./requirements.txt
-  deactivate
-  ```
-  ```bash
-  venv/Script/activate
-  streamlit run ./main.py
   ```
 
 #### Mockup Ecommerce Setup `cd mockup-ecommerce`:
@@ -140,17 +102,6 @@ ngrok tunnel --label edge=edghts_2atupyk74q8O638a0bdIkg9CPro http://localhost:80
   ```
   ```bash
   source .venv/bin/activate
-  flask --app app --debug run
-  ```
-- Windows Systems:
-  ```bash
-  python -m venv venv
-  venv/Script/activate
-  pip install -r ./requirements.txt
-  deactivate
-  ```
-  ```bash
-  venv/Script/activate
   flask --app app --debug run
   ```
 
