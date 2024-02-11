@@ -57,7 +57,7 @@ These folders will be created during ML assets fetching:
 
 - ***Develop Locally with Secrets***
 
-When developing your app locally, you need to manage your secrets. Follow the steps below:
+When developing your app locally, you need to manage your ***OpenAI API Key*** secrets for `{st.secrets.OPENAI_API_KEY}` in [features.py](./frontend/features.py). Follow the steps below:
 
 1. Add a file called `secrets.toml` in a folder called `.streamlit` at the `frontend/` of your app repository.
 2. Copy and paste your secrets into the `secrets.toml` file.
